@@ -1,0 +1,5 @@
+type IconName = 'menu'|'search'|'message'|'bell'|'chevron'|'home'|'grid'|'plus'|'ticket'|'heart'|'user'|'pin'|'list'|'back'
+const paths: Record<IconName, string> = {
+  menu:'M4 7h16M4 12h16M4 17h16', search:'m21 21-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z', message:'M4 5h16v11H8l-4 4V5Z', bell:'M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4', chevron:'m9 18 6-6-6-6', home:'M3 11 12 4l9 7v9H5v-9Z', grid:'M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z', plus:'M12 5v14M5 12h14', ticket:'M4 6h16v12H4zM8 6v12', heart:'M20.8 8.6c0 5-8.8 10.4-8.8 10.4S3.2 13.6 3.2 8.6A4.6 4.6 0 0 1 12 6a4.6 4.6 0 0 1 8.8 2.6Z', user:'M20 21a8 8 0 1 0-16 0M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z', pin:'M12 22s7-6.2 7-12A7 7 0 1 0 5 10c0 5.8 7 12 7 12ZM12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z', list:'M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01', back:'M15 18l-6-6 6-6'
+}
+export function Icon({name}:{name:IconName}){return <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d={paths[name]}/></svg>}
