@@ -6,3 +6,9 @@ export const listings = [
 ].map(([title, price, image]) => ({ title, price, image, location: 'Antananarivo' }))
 export const messages = ['Rindra','Mbala','Andry','Solofo','Tiana'].map((name,i)=>({name,text:['Est-ce encore disponible ?','Merci, je suis intéressé !','Pouvez-vous baisser le prix ?','Je viendrai voir aujourd’hui','D’accord, merci beaucoup !'][i],time:['10:30','09:15','Hier','Hier','2 jours'][i],avatar:`https://i.pravatar.cc/100?img=${i+12}`}))
 export const notifications = [{icon:'🏷',title:'Votre annonce a été publiée avec succès',time:'Il y a 2 heures'},{icon:'👤',title:'Rindra vous a envoyé un message',time:'Il y a 3 heures'},{icon:'🏠',title:'Votre annonce a expiré',time:'Il y a 1 jour'},{icon:'⭐',title:'Solofo a ajouté votre annonce en favoris',time:'Il y a 2 jours'},{icon:'💵',title:'Paiement reçu pour annonce sponsorisée',time:'Il y a 3 jours'}]
+
+export const sponsors = [
+  { name: 'Mada Auto Pro', category: 'Concessionnaire partenaire', description: 'Véhicules vérifiés, garantie et service après-vente à Antananarivo.', phone: '+261 34 90 123 45', location: 'Ankorondrano, Antananarivo', image: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=700&q=80' },
+  { name: 'Habitat Mada', category: 'Agence immobilière sponsorisée', description: 'Locations, ventes et accompagnement professionnel pour votre prochain logement.', phone: '+261 33 12 456 78', location: 'Ivandry, Antananarivo', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80' },
+  { name: 'Tech Store Tana', category: 'Boutique électronique certifiée', description: 'Smartphones, ordinateurs et accessoires neufs avec facture officielle.', phone: '+261 32 44 987 10', location: 'Analakely, Antananarivo', image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80' },
+]

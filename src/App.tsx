@@ -1,5 +1,5 @@
 import './App.css'
-import { categories, listings, messages, notifications } from './data/market'
+import { categories, listings, messages, notifications, sponsors } from './data/market'
 import { Icon } from './components/Icon'
 import { ListingCard } from './components/ListingCard'
 import { CategoryRow } from './components/CategoryRow'
@@ -41,8 +41,21 @@ function DetailPanel() {
   </aside>
 }
 
+function SponsoredRail() {
+  return <aside className="sponsor-rail panel">
+    <div className="sponsor-header"><span>Partenaires officiels</span><strong>Espace sponsorisé</strong></div>
+    <h2>Entreprises sponsorisées</h2>
+    <p className="muted">Cet emplacement est réservé aux entreprises partenaires de Mada Market, pas aux détails d’une annonce.</p>
+    {sponsors.map(company => <article className="sponsor-card" key={company.name}>
+      <img src={company.image} alt={company.name}/>
+      <div><small>{company.category}</small><h3>{company.name}</h3><p>{company.description}</p><b>{company.phone}</b><span><Icon name="pin"/> {company.location}</span></div>
+    </article>)}
+    <button className="primary full">Devenir sponsor</button>
+  </aside>
+}
+
 function HomePage() {
-  return <><Header/><nav className="desktop-nav"><a className="active"><Icon name="home"/>Accueil</a><a><Icon name="grid"/>Catégories</a><a><Icon name="plus"/>Publier une annonce</a><a><Icon name="ticket"/>Mes annonces</a><a><Icon name="heart"/>Mes favoris</a><a><Icon name="user"/>Profil</a></nav><main className="desktop-shell"><Sidebar/><section className="content"><div className="section-head"><h2>Annonces récentes</h2><a>Voir tout</a></div><div className="carousel">{listings.slice(0,5).map(i=><ListingCard key={i.title} item={i}/>)}</div><div className="section-head border"><h2>Toutes les annonces</h2><div className="view-icons"><Icon name="grid"/><Icon name="list"/></div></div><div className="filters"><button className="primary">Toutes</button><button>Antananarivo</button><button>Prix⌄</button><button>Trier⌄</button></div><div className="grid-listings">{listings.map(i=><ListingCard key={i.title} item={i}/>)}</div></section><DetailPanel/></main></>
+  return <><Header/><nav className="desktop-nav"><a className="active"><Icon name="home"/>Accueil</a><a><Icon name="grid"/>Catégories</a><a><Icon name="plus"/>Publier une annonce</a><a><Icon name="ticket"/>Mes annonces</a><a><Icon name="heart"/>Mes favoris</a><a><Icon name="user"/>Profil</a></nav><main className="desktop-shell"><Sidebar/><section className="content"><div className="section-head"><h2>Annonces récentes</h2><a>Voir tout</a></div><div className="carousel">{listings.slice(0,5).map(i=><ListingCard key={i.title} item={i}/>)}</div><div className="section-head border"><h2>Toutes les annonces</h2><div className="view-icons"><Icon name="grid"/><Icon name="list"/></div></div><div className="filters"><button className="primary">Toutes</button><button>Antananarivo</button><button>Prix⌄</button><button>Trier⌄</button></div><div className="grid-listings">{listings.map(i=><ListingCard key={i.title} item={i}/>)}</div></section><SponsoredRail/></main></>
 }
 
 function MobileShowcase() {
