@@ -1,50 +1,163 @@
-# React + TypeScript + Vite
+Voici un prompt détaillé que tu peux utiliser avec un générateur d'interface (ChatGPT, Figma AI, Lovable, v0, Claude, etc.) pour créer la **page Catégories** de ton projet **MADA MARKET**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```text
+Conçois une interface Web Desktop ultra moderne, premium et professionnelle pour la plateforme MADA MARKET.
 
-Currently, two official plugins are available:
+IMPORTANT :
+- Ne change pas le concept de l'application.
+- Ne modifie aucun texte ni aucune fonctionnalité existante.
+- Garde exactement la même identité visuelle : fond noir (#0D0D0D), cartes gris foncé, couleur principale jaune/or (#FFC107), design minimaliste.
+- Inspire-toi de la qualité visuelle de Netflix, Airbnb, Apple et du Microsoft Fluent Design.
+- Interface très élégante avec beaucoup d'espace, coins arrondis (16-20px), ombres douces, animations modernes et hiérarchie visuelle parfaite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+=========================
+HEADER
+=========================
 
-## Expanding the ESLint configuration
+En haut :
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Logo MADA MARKET à gauche
+- Grande barre de recherche au centre
+- Messages
+- Notifications
+- Avatar utilisateur
+- Bouton Publier une annonce
 
-- Configure the top-level `parserOptions` property like this:
+=========================
+SIDEBAR
+=========================
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Barre latérale gauche :
+
+- Accueil
+- Catégories (actif)
+- Publier une annonce
+- Mes annonces
+- Favoris
+- Messages
+- Profil
+- Paramètres
+
+=========================
+CONTENU PRINCIPAL
+=========================
+
+Titre :
+
+Catégories
+
+Sous-titre :
+
+Choisissez une catégorie pour parcourir les annonces.
+
+Les catégories sont présentées sous forme de cartes premium.
+
+Chaque carte contient :
+
+• Grande image de couverture
+• Icône colorée
+• Nom de la catégorie
+• Nombre d'annonces
+• Petite description
+• Bouton Explorer
+• Effet hover avec légère élévation
+
+Disposition :
+
+Desktop :
+4 cartes par ligne
+
+Catégories :
+
+🏠 Immobilier
+🚗 Véhicules
+👕 Mode & Vêtements
+📱 Électronique
+🛋 Maison & Jardin
+🌾 Agriculture
+🛠 Services
+💼 Emploi
+📍 Location
+📦 Divers
+
+Sous les catégories :
+
+Section :
+
+Catégories populaires
+
+Sous forme de grandes cartes horizontales.
+
+Exemples :
+
+Immobilier
+Voitures
+Téléphones
+Terrains
+Meubles
+
+Chaque carte affiche :
+
+Image immersive
+Nombre d'annonces
+Bouton Voir
+
+=========================
+PARTIE DROITE
+=========================
+
+À droite :
+
+Bloc "Catégorie sélectionnée"
+
+Affiche :
+
+Grande image
+Nom
+Description
+Nombre d'annonces
+Catégories similaires
+Bouton Explorer cette catégorie
+
+=========================
+STYLE
+=========================
+
+Très premium.
+
+Espacements généreux.
+
+Cartes type Netflix.
+
+Images occupant presque toute la carte.
+
+Coins arrondis.
+
+Animations fluides.
+
+Hover avec zoom très léger.
+
+Icônes modernes.
+
+Ombres discrètes.
+
+Design responsive.
+
+Aucune surcharge.
+
+Tout doit respirer.
+
+Le résultat doit donner l'impression d'une plateforme utilisée par plusieurs millions d'utilisateurs.
+
+Qualité équivalente aux interfaces de :
+
+Netflix
+Airbnb
+Apple
+Amazon
+Facebook Marketplace
+
+Aspect final :
+Très haut de gamme, professionnel, moderne et élégant.
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
